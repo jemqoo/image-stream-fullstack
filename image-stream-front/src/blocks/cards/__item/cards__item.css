@@ -1,0 +1,6 @@
+.cards__item {
+    width: 282px;
+    background: #ffffff;
+    border-radius: 10px;
+    position: relative;
+}

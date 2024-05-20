@@ -1,0 +1,14 @@
+#Restart проекта при изменениях
+
+docker compose stop
+docker compose rm
+docker system prune
+        docker compose --env-file ./.production.env up --build -d --force-recreate
+docker compose logs -f
+
+#Для контейнера postgres
+
+docker exec -it 8b8a60aea83b bash
+psql -h $POSTGRES_HOST -U $POSTGRES_USER
+CREATE DATABASE jemqoo;
+\c jemqoo

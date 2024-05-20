@@ -1,0 +1,11 @@
+services:
+    frontend_cashex:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        restart: unless-stopped
+
+        container_name: jemqoo_front
+
+        ports:
+            - '3000:3000'
