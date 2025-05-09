@@ -29,7 +29,7 @@ export const authorize = (email, password) => {
         .then((data) => {
             if (data.token) {
                 localStorage.setItem('token', data.token);
-                // window.location.reload();
+                window.location.reload();
                 return data;
             }
         });
