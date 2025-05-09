@@ -17,10 +17,10 @@ import { Like } from './likes/model/likes.model';
         }),
         SequelizeModule.forRoot({
             dialect: 'postgres',
-            host: 'postgres',
+            host: 'localhost',
             port: 5432,
             username: 'postgres',
-            password: 'postgres',
+            password: '111111',
             database: 'jemqoo',
             models: [User, Card, Like],
             autoLoadModels: true,

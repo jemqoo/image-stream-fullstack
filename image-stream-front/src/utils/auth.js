@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://92.51.44.25:3001';
+export const BASE_URL = 'http://localhost:5000';
 
 function checkResponse(res) {
     if (res.ok) {
@@ -16,7 +16,7 @@ export const register = (email, password) => {
         body: JSON.stringify({ email, password }),
     }).then(checkResponse);
 };
-
+   
 export const authorize = (email, password) => {
     return fetch(`${BASE_URL}/signin`, {
         method: 'POST',
@@ -29,6 +29,7 @@ export const authorize = (email, password) => {
         .then((data) => {
             if (data.token) {
                 localStorage.setItem('token', data.token);
+                // window.location.reload();
                 return data;
             }
         });
