@@ -18,7 +18,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
     return (
         <PopupWithForm
             name="add"
-            title="Новое место"
+            title="Новый пост"
             btnText={isLoading ? 'Сохранение...' : 'Создать'}
             isOpen={isOpen}
             onClose={onClose}
